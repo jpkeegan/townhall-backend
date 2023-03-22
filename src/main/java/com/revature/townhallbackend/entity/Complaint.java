@@ -19,11 +19,13 @@ public class Complaint {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long complaint_id;
+    private String title;
     private String description;
     private String status;
     private Long meeting_id;
 
-    public Complaint(String description, String status, Long meeting_id) {
+    public Complaint(String title, String description, String status, Long meeting_id) {
+        this.title = title;
         this.description = description;
         this.status = status;
         this.meeting_id = meeting_id;

@@ -23,11 +23,14 @@ public class User {
     private String last_name;
     private String role;
 
-    public User(String username, String password, String first_name, String last_name, String role) {
+    private String profile_pic;
+
+    public User(String username, String password, String first_name, String last_name, String role, String profile_pic) {
         this.username = username;
         this.password = password;
         this.first_name = first_name;
         this.last_name = last_name;
         this.role = role;
+        this.profile_pic = profile_pic;
     }
 }

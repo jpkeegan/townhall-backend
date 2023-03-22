@@ -18,12 +18,14 @@ public class Meeting {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long meeting_id;
+    private String title;
     private String address;
     private Long time;
     private String summary;
 
 
-    public Meeting(String address, Long time, String summary) {
+    public Meeting(String title, String address, Long time, String summary) {
+        this.title = title;
         this.address = address;
         this.time = time;
         this.summary = summary;
