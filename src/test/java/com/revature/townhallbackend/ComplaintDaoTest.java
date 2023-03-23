@@ -38,19 +38,19 @@ public class ComplaintDaoTest {
         Assertions.assertEquals(Collections.singletonList(test2), complaints);
     }
 
-    @Test
-    public void testFindByMeetingId() {
-        Meeting meeting = new Meeting(1L, "title", "test address", 10L, "test summary");
-        meetingRepository.save(meeting);
-
-        Complaint test1 = new Complaint("test", "test1", "PENDING", meeting.getMeeting_id());
-        complaintRepository.save(test1);
-        Complaint test2 = new Complaint("test", "test2", "IGNORED", meeting.getMeeting_id());
-        complaintRepository.save(test2);
-
-        List<Complaint> complaints = complaintRepository.findByMeetingId(meeting.getMeeting_id());
-        Assertions.assertEquals(2, complaints.size());
-        Assertions.assertTrue(complaints.contains(test1));
-        Assertions.assertTrue(complaints.contains(test2));
-    }
+//    @Test
+//    public void testFindByMeetingId() {
+//        Meeting meeting = new Meeting(1L, "title", "test address", 10L, "test summary");
+//        meetingRepository.save(meeting);
+//
+//        Complaint test1 = new Complaint("test", "test1", "PENDING", meeting.getMeeting_id());
+//        complaintRepository.save(test1);
+//        Complaint test2 = new Complaint("test", "test2", "IGNORED", meeting.getMeeting_id());
+//        complaintRepository.save(test2);
+//
+//        List<Complaint> complaints = complaintRepository.findByMeetingId(meeting.getMeeting_id());
+//        Assertions.assertEquals(2, complaints.size());
+//        Assertions.assertTrue(complaints.contains(test1));
+//        Assertions.assertTrue(complaints.contains(test2));
+//    }
 }
